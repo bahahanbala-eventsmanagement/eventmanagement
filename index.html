@@ -4,114 +4,158 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>إدارة المعارض والمؤتمرات</title>
-
-<!-- CSS -->
 <link rel="stylesheet" href="assets/style.css">
-
-<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<!-- Lightbox CSS & JS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
-
 </head>
+
 <body>
 
+<!-- ---------- LANGUAGE SWITCH ---------- -->
+<div class="language-switch">
+  <button id="lang-ar" class="active">العربية</button>
+  <button id="lang-en">English</button>
+</div>
+
+<!-- ---------- HEADER ---------- -->
 <header>
   <div class="logo-container">
     <img src="assets/images/logo.png" alt="شعار إدارة المعارض والمؤتمرات">
   </div>
-  <h1>إدارة وتنفيذ المعارض والمؤتمرات</h1>
-  <p>الرياض - المملكة العربية السعودية</p>
+  <h1 class="lang-ar">إدارة وتنفيذ المعارض والمؤتمرات</h1>
+  <h1 class="lang-en" style="display:none;">Events & Exhibitions Management</h1>
+  <p class="lang-ar">الرياض - المملكة العربية السعودية</p>
+  <p class="lang-en" style="display:none;">Riyadh - Saudi Arabia</p>
   <nav>
     <ul class="nav-links">
-      <li><a href="#services">الخدمات</a></li>
-      <li><a href="#projects">أعمالي</a></li>
-      <li><a href="#contact">تواصل معي</a></li>
+      <li><a href="#services" class="lang-ar">الخدمات</a><a href="#services" class="lang-en" style="display:none;">Services</a></li>
+      <li><a href="#projects" class="lang-ar">أعمالي</a><a href="#projects" class="lang-en" style="display:none;">Projects</a></li>
+      <li><a href="#contact" class="lang-ar">تواصل معي</a><a href="#contact" class="lang-en" style="display:none;">Contact</a></li>
     </ul>
   </nav>
 </header>
 
 <div class="container">
 
-  <!-- About -->
+  <!-- ---------- ABOUT ---------- -->
   <section class="card" id="about">
-    <h2>من أنا</h2>
-    <p>
-      مدير مشاريع ومدير تكاليف متخصص في تنفيذ المعارض والمؤتمرات،
-      أقدم حلول احترافية لإدارة المشاريع من التخطيط حتى التنفيذ،
-      مع التركيز على الجودة وضبط التكاليف وتحقيق أفضل النتائج.
+    <h2 class="lang-ar">من أنا</h2>
+    <h2 class="lang-en" style="display:none;">About Me</h2>
+    <p class="lang-ar">
+      متخصص في إدارة وتنفيذ المعارض والمؤتمرات مع التركيز على الجودة وضبط التكاليف. أقدم حلول متكاملة لتنظيم فعاليات استثنائية، مع تنسيق كامل بين جميع الموردين لضمان نجاح الحدث.
+    </p>
+    <p class="lang-en" style="display:none;">
+      Specialist in managing and executing exhibitions & conferences with a focus on quality and cost control. I provide comprehensive solutions for exceptional events, coordinating with all vendors to ensure success.
     </p>
   </section>
 
-  <!-- Services -->
+  <!-- ---------- SERVICES ---------- -->
   <section class="card" id="services">
-    <h2>الخدمات</h2>
+    <h2 class="lang-ar">الخدمات</h2>
+    <h2 class="lang-en" style="display:none;">Services</h2>
     <div class="services">
-      <div class="service">إدارة مشاريع المعارض</div>
-      <div class="service">تنفيذ المؤتمرات</div>
-      <div class="service">إدارة التكاليف</div>
-      <div class="service">الإشراف على التنفيذ</div>
+      <div class="service lang-ar">إدارة الفعاليات</div>
+      <div class="service lang-en" style="display:none;">Event Management</div>
+
+      <div class="service lang-ar">إدارة التكاليف</div>
+      <div class="service lang-en" style="display:none;">Cost Management</div>
+
+      <div class="service lang-ar">تنفيذ المعارض والمؤتمرات</div>
+      <div class="service lang-en" style="display:none;">Exhibitions & Conferences Execution</div>
+
+      <div class="service lang-ar">التنسيق بين الموردين</div>
+      <div class="service lang-en" style="display:none;">Vendor Coordination</div>
     </div>
   </section>
 
-  <!-- Projects / Gallery -->
+  <!-- ---------- PROJECTS / GALLERY ---------- -->
   <section class="card" id="projects">
-    <h2>أعمالي</h2>
+    <h2 class="lang-ar">أعمالي</h2>
+    <h2 class="lang-en" style="display:none;">Projects</h2>
 
-    <!-- Quran Museum -->
-    <h3>متحف القرآن الكريم</h3>
+    <!-- مشروع: متحف القرآن الكريم -->
+    <h3 class="lang-ar">متحف القرآن الكريم</h3>
+    <h3 class="lang-en" style="display:none;">Quran Museum</h3>
     <div class="gallery">
-      <a href="assets/images/museumquran1.jpeg" data-lightbox="quran"><img src="assets/images/museumquran1.jpeg" alt="Quran Museum 1"></a>
-      <a href="assets/images/museumquran2.jpeg" data-lightbox="quran"><img src="assets/images/museumquran2.jpeg" alt="Quran Museum 2"></a>
-      <a href="assets/images/museumquran3.jpeg" data-lightbox="quran"><img src="assets/images/museumquran3.jpeg" alt="Quran Museum 3"></a>
-      <a href="assets/images/museumquran4.jpeg" data-lightbox="quran"><img src="assets/images/museumquran4.jpeg" alt="Quran Museum 4"></a>
+      <img src="assets/images/museumquran1.jpeg" alt="Quran Museum 1">
+      <img src="assets/images/museumquran2.jpeg" alt="Quran Museum 2">
+      <img src="assets/images/museumquran3.jpeg" alt="Quran Museum 3">
+      <img src="assets/images/museumquran4.jpeg" alt="Quran Museum 4">
     </div>
 
-    <!-- Cityscape 2025 -->
-    <h3>Cityscape 2025</h3>
+    <!-- مشروع: Cityscape 2026 -->
+    <h3 class="lang-ar">Cityscape 2026</h3>
+    <h3 class="lang-en" style="display:none;">Cityscape 2026</h3>
     <div class="gallery">
-      <a href="assets/images/CITYSCAPE1.jpeg" data-lightbox="cityscape"><img src="assets/images/CITYSCAPE1.jpeg"></a>
-      <a href="assets/images/CITYSCAPE2.jpeg" data-lightbox="cityscape"><img src="assets/images/CITYSCAPE2.jpeg"></a>
-      <a href="assets/images/CITYSCAPE3.jpeg" data-lightbox="cityscape"><img src="assets/images/CITYSCAPE3.jpeg"></a>
-      <a href="assets/images/CITYSCAPE4.jpeg" data-lightbox="cityscape"><img src="assets/images/CITYSCAPE4.jpeg"></a>
-      <a href="assets/images/CITYSCAPE5.jpeg" data-lightbox="cityscape"><img src="assets/images/CITYSCAPE5.jpeg"></a>
-      <a href="assets/images/CITYSCAPE6.jpeg" data-lightbox="cityscape"><img src="assets/images/CITYSCAPE6.jpeg"></a>
-      <a href="assets/images/CITYSCAPE7.jpeg" data-lightbox="cityscape"><img src="assets/images/CITYSCAPE7.jpeg"></a>
-      <a href="assets/images/CITYSCAPE8.jpeg" data-lightbox="cityscape"><img src="assets/images/CITYSCAPE8.jpeg"></a>
-      <a href="assets/images/CITYSCAPE9.jpeg" data-lightbox="cityscape"><img src="assets/images/CITYSCAPE9.jpeg"></a>
+      <img src="assets/images/CITYSCAPE1.jpeg">
+      <img src="assets/images/CITYSCAPE2.jpeg">
+      <img src="assets/images/CITYSCAPE3.jpeg">
+      <img src="assets/images/CITYSCAPE4.jpeg">
+      <img src="assets/images/CITYSCAPE5.jpeg">
+      <img src="assets/images/CITYSCAPE6.jpeg">
+      <img src="assets/images/CITYSCAPE7.jpeg">
+      <img src="assets/images/CITYSCAPE8.jpeg">
+      <img src="assets/images/CITYSCAPE9.jpeg">
     </div>
 
-    <!-- Fabric Exhibition 2026 -->
-    <h3>معرض الأقمشة الرجالي 2026</h3>
+    <!-- معرض الأقمشة الرجالي 2026 -->
+    <h3 class="lang-ar">معرض الأقمشة الرجالي 2026</h3>
+    <h3 class="lang-en" style="display:none;">Men's Fabric Exhibition 2026</h3>
     <div class="gallery">
-      <a href="assets/images/fabric1.jpeg" data-lightbox="fabric"><img src="assets/images/fabric1.jpeg" alt="Fabric 1"></a>
-      <a href="assets/images/fabric2.jpeg" data-lightbox="fabric"><img src="assets/images/fabric2.jpeg" alt="Fabric 2"></a>
-      <a href="assets/images/fabric3.jpeg" data-lightbox="fabric"><img src="assets/images/fabric3.jpeg" alt="Fabric 3"></a>
+      <img src="assets/images/fabric1.jpeg" alt="Fabric 1">
+      <img src="assets/images/fabric2.jpeg" alt="Fabric 2">
+      <img src="assets/images/fabric3.jpeg" alt="Fabric 3">
     </div>
 
-    <!-- Coffee & Chocolate 2026 -->
-    <h3>معرض القهوة والشوكولاتة 2026</h3>
+    <!-- معرض القهوة والشوكولاتة 2026 -->
+    <h3 class="lang-ar">معرض القهوة والشوكولاتة 2026</h3>
+    <h3 class="lang-en" style="display:none;">Coffee & Chocolate Exhibition 2026</h3>
     <div class="gallery">
-      <a href="assets/images/coffee1.jpeg" data-lightbox="coffee"><img src="assets/images/coffee1.jpeg" alt="Coffee 1"></a>
-      <a href="assets/images/coffee2.jpeg" data-lightbox="coffee"><img src="assets/images/coffee2.jpeg" alt="Coffee 2"></a>
-      <a href="assets/images/coffee3.jpeg" data-lightbox="coffee"><img src="assets/images/coffee3.jpeg" alt="Coffee 3"></a>
+      <img src="assets/images/coffee1.jpeg" alt="Coffee 1">
+      <img src="assets/images/coffee2.jpeg" alt="Coffee 2">
+      <img src="assets/images/coffee3.jpeg" alt="Coffee 3">
     </div>
-
   </section>
 
-  <!-- Contact -->
-  <div class="card contact" id="contact">
-    <h2>تواصل معي</h2>
+  <!-- ---------- CONTACT ---------- -->
+  <section class="card contact" id="contact">
+    <h2 class="lang-ar">تواصل معي</h2>
+    <h2 class="lang-en" style="display:none;">Contact</h2>
     <p><i class="fas fa-envelope"></i> <a href="mailto:Bahahanbala@gmail.com">Bahahanbala@gmail.com</a></p>
     <p><i class="fas fa-phone"></i> <a href="tel:+966573049650">966573049650</a></p>
-    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/966573049650" target="_blank">تواصل عبر واتساب</a></p>
+    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/966573049650" target="_blank">WhatsApp</a></p>
     <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/baha-hanbala" target="_blank">LinkedIn</a></p>
     <button onclick="window.open('https://wa.me/966573049650','_blank')">تواصل الآن</button>
-  </div>
+  </section>
 
 </div>
+
+<script>
+// ---------- LANGUAGE SWITCH ----------
+const btnAr = document.getElementById('lang-ar');
+const btnEn = document.getElementById('lang-en');
+
+btnAr.addEventListener('click', () => {
+  document.querySelectorAll('.lang-ar').forEach(e=>e.style.display='block');
+  document.querySelectorAll('.lang-en').forEach(e=>e.style.display='none');
+  btnAr.classList.add('active');
+  btnEn.classList.remove('active');
+});
+
+btnEn.addEventListener('click', () => {
+  document.querySelectorAll('.lang-en').forEach(e=>e.style.display='block');
+  document.querySelectorAll('.lang-ar').forEach(e=>e.style.display='none');
+  btnEn.classList.add('active');
+  btnAr.classList.remove('active');
+});
+
+// ---------- SMOOTH SCROLL ----------
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+  anchor.addEventListener('click', function(e){
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+  });
+});
+</script>
 
 </body>
 </html>
