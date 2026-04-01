@@ -23,7 +23,7 @@ header {
 }
 
 .logo-container {
-  width: 250px;     /* الشعار الأفقي */
+  width: 250px;     
   height: auto;
   margin-bottom: 20px;
 }
@@ -117,13 +117,14 @@ h3 {
   text-align:center;
   font-weight: 500;
   font-size: 16px;
-  transition: transform 0.3s, background 0.3s;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
   cursor: default;
 }
 
 .service:hover {
   transform: translateY(-5px);
   background:#dbe6f5;
+  box-shadow:0 10px 20px rgba(0,0,0,0.15);
 }
 
 /* ---------- GALLERY ---------- */
@@ -151,32 +152,42 @@ h3 {
 /* ---------- CONTACT ---------- */
 .contact {
   text-align:center;
+  color: #0a1f44 !important;
+  margin-top: 20px;
 }
 
-.contact p {
+.contact p,
+.contact a,
+.contact span {
   font-size: 18px;
   margin: 8px 0;
+  color: #0a1f44 !important;
+  font-weight: 500;
 }
 
 .contact a {
   text-decoration: none;
 }
 
-button {
-  background:#0a1f44;
-  color:white;
+.contact a:hover {
+  color: #163a7a !important;
+}
+
+.contact button {
+  margin-top: 15px;
+  background: #0a1f44;
+  color: white;
+  font-weight: 600;
   padding:14px 28px;
   border:none;
   border-radius:10px;
   cursor:pointer;
-  margin-top:15px;
-  font-size: 16px;
-  font-weight: 600;
-  transition: 0.3s;
+  font-size:16px;
+  transition:0.3s;
 }
 
-button:hover {
-  background:#163a7a;
+.contact button:hover {
+  background: #163a7a;
   transform: translateY(-2px);
 }
 
@@ -204,59 +215,4 @@ footer a:hover {
   header p { font-size: 16px; }
   .nav-links { flex-direction: column; gap: 15px; }
   .logo-container { width: 180px; }
-}
-.contact {
-  text-align: center;
-  color: #0a1f44; /* نص أرقام وإيميل بلون داكن ليظهر على الخلفية */
-  margin-top: 20px;
-}
-
-.contact p {
-  font-size: 18px;
-  margin: 8px 0;
-  color: #0a1f44; /* نص مرئي */
-}
-
-.contact a {
-  text-decoration: none;
-  color: #0a1f44; /* لينكدإن بلون مرئي */
-  font-weight: 600;
-}
-
-.contact a:hover {
-  color: #163a7a;
-}
-.contact {
-  text-align: center;
-  color: #0a1f44 !important; /* النصوص مرئية دائمًا */
-  margin-top: 20px;
-}
-
-.contact p,
-.contact a,
-.contact span {
-  font-size: 18px;
-  margin: 8px 0;
-  color: #0a1f44 !important; /* النصوص مثل البريد والهاتف واللينكدإن */
-  font-weight: 500;
-}
-
-.contact a {
-  text-decoration: none;
-}
-
-.contact a:hover {
-  color: #163a7a !important; /* لون عند المرور */
-}
-
-.contact button {
-  margin-top: 15px;
-  background: #0a1f44;
-  color: white;
-  font-weight: 600;
-}
-
-.contact button:hover {
-  background: #163a7a;
-  transform: translateY(-2px);
 }
