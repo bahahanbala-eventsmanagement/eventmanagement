@@ -172,6 +172,60 @@ document.getElementById('lightbox').addEventListener('click',()=>{
   document.getElementById('lightbox').classList.remove('show');
 });
 </script>
+<script>
+// ---------- LANGUAGE DATA ----------
+const elements = {
+  'about-title': { 'ar': 'من أنا', 'en': 'About Me' },
+  'about': { 
+    'ar': 'مدير مشاريع متخصص في تنفيذ المعارض والمؤتمرات، يقدم حلول احترافية من التخطيط حتى التنفيذ مع التركيز على الجودة وضبط التكاليف.', 
+    'en': 'Project manager specialized in exhibitions & conferences, offering professional solutions from planning to execution with focus on quality and cost control.' 
+  },
+  'services-title': { 'ar': 'الخدمات', 'en': 'Services' },
+  'services': { 
+    'ar': ['إدارة الفعاليات', 'إدارة التكاليف', 'تنفيذ المعارض والمؤتمرات', 'التنسيق بين الموردين'], 
+    'en': ['Event Management', 'Cost Management', 'Exhibitions & Conferences', 'Supplier Coordination'] 
+  },
+  'projects-title': { 'ar': 'أعمالي', 'en': 'Projects' },
+  'projects': { 
+    'ar': { museum: 'متحف القرآن الكريم', cityscape: 'Cityscape 2026', fabric: 'معرض الأقمشة الرجالي 2026', coffee: 'معرض القهوة والشوكولاتة 2026' },
+    'en': { museum: 'Quran Museum', cityscape: 'Cityscape 2026', fabric: 'Men\'s Fabric Expo 2026', coffee: 'Coffee & Chocolate Expo 2026' }
+  },
+  'contact-title': { 'ar': 'تواصل معي', 'en': 'Contact Me' },
+  'contact': { 
+    'ar': { email: 'البريد الإلكتروني: Bahahanbala@gmail.com', phone: 'الهاتف: 966573049650', whatsapp: 'تواصل عبر واتساب', linkedin: 'لينكدإن', button: 'تواصل الآن' },
+    'en': { email: 'Email: Bahahanbala@gmail.com', phone: 'Phone: 966573049650', whatsapp: 'Contact via WhatsApp', linkedin: 'LinkedIn', button: 'Contact Now' }
+  }
+};
 
+// ---------- SWITCH LANGUAGE FUNCTION ----------
+function switchLang(lang) {
+  // About
+  document.querySelector('#about h2').innerText = elements['about-title'][lang];
+  document.querySelector('#about p').innerText = elements['about'][lang];
+
+  // Services
+  document.querySelector('#services h2').innerText = elements['services-title'][lang];
+  document.querySelectorAll('#services .service').forEach((el, i) => {
+    el.innerText = elements['services'][lang][i];
+  });
+
+  // Projects
+  document.querySelector('#projects h2').innerText = elements['projects-title'][lang];
+  const projectH3 = document.querySelectorAll('#projects h3');
+  projectH3[0].innerText = elements.projects[lang].museum;
+  projectH3[1].innerText = elements.projects[lang].cityscape;
+  projectH3[2].innerText = elements.projects[lang].fabric;
+  projectH3[3].innerText = elements.projects[lang].coffee;
+
+  // Contact
+  document.querySelector('#contact h2').innerText = elements['contact-title'][lang];
+  const contactP = document.querySelectorAll('#contact p');
+  contactP[0].innerHTML = <i class="fas fa-envelope"></i> <a href="mailto:Bahahanbala@gmail.com">${elements.contact[lang].email}</a>;
+  contactP[1].innerHTML = <i class="fas fa-phone"></i> <a href="tel:+966573049650">${elements.contact[lang].phone}</a>;
+  contactP[2].innerHTML = <i class="fab fa-whatsapp"></i> <a href="https://wa.me/966573049650" target="_blank">${elements.contact[lang].whatsapp}</a>;
+  contactP[3].innerHTML = <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/baha-hanbala" target="_blank">${elements.contact[lang].linkedin}</a>;
+  document.querySelector('#contact button').innerText = elements.contact[lang].button;
+}
+</script>
 </body>
 </html>
