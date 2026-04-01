@@ -205,3 +205,24 @@ footer a:hover {
   .nav-links { flex-direction: column; gap: 15px; }
   .logo-container { width: 180px; }
 }
+.contact {
+  text-align: center;
+  color: #0a1f44; /* نص أرقام وإيميل بلون داكن ليظهر على الخلفية */
+  margin-top: 20px;
+}
+
+.contact p {
+  font-size: 18px;
+  margin: 8px 0;
+  color: #0a1f44; /* نص مرئي */
+}
+
+.contact a {
+  text-decoration: none;
+  color: #0a1f44; /* لينكدإن بلون مرئي */
+  font-weight: 600;
+}
+
+.contact a:hover {
+  color: #163a7a;
+}
