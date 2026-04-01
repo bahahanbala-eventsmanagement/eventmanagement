@@ -1,121 +1,3 @@
-body {
-  margin:0;
-  font-family: 'Arial', sans-serif;
-  background:#f4f6f9;
-}
-
-header {
-  background: linear-gradient(135deg,#0a1f44,#1e3c72);
-  color:white;
-  padding:60px 20px;
-  text-align:center;
-}
-
-header h1 {
-  font-size:48px;
-  margin-bottom:10px;
-}
-
-header p {
-  font-size:20px;
-}
-
-.container {
-  padding:30px;
-  max-width:1200px;
-  margin:auto;
-}
-
-.card {
-  background:white;
-  padding:25px;
-  margin:20px 0;
-  border-radius:15px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-}
-
-h2 {
-  color:#0a1f44;
-}
-
-.services {
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap:15px;
-}
-
-.service {
-  background:#eef2f7;
-  padding:15px;
-  border-radius:10px;
-  text-align:center;
-  transition: transform 0.3s;
-}
-
-.service:hover {
-  transform: translateY(-5px);
-  background: #d9e0f7;
-}
-
-.gallery {
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap:15px;
-}
-
-.gallery img {
-  width:100%;
-  border-radius:10px;
-  transition: transform 0.3s;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-}
-
-.contact {
-  text-align:center;
-}
-
-button {
-  background:#0a1f44;
-  color:white;
-  padding:12px 20px;
-  border:none;
-  border-radius:8px;
-  cursor:pointer;
-  margin-top:10px;
-  transition: background 0.3s;
-}
-
-button:hover {
-  background:#163a7a;
-}
-
-a {
-  color:#0a1f44;
-  text-decoration:none;
-}
-
-a:hover {
-  text-decoration:underline;
-}
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-}
-
-.gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-}
 /* ---------- BODY ---------- */
 body {
   margin:0;
@@ -133,20 +15,20 @@ header {
 
 .logo-container {
   width: 100%;
-  height: 200px;             /* ارتفاع الهيدر */
+  height: 200px;
   display: flex;
-  justify-content: center;   /* توسيط أفقي */
-  align-items: center;       /* توسيط عمودي */
-  overflow: hidden;          /* يمنع خروج الشعار */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   margin-bottom: 15px;
 }
 
 .logo-container img {
-  width: auto;               /* يحافظ على نسبة العرض/الارتفاع */
-  height: 100%;              /* يمتليء ارتفاع الحاوية */
-  max-width: 100%;           /* لا يتجاوز الهيدر */
-  object-fit: contain;       /* يحافظ على الشكل دون تشويه */
-  border-radius: 10px;       /* حواف دائرية للشعار */
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
 }
 
 header h1 {
@@ -156,6 +38,25 @@ header h1 {
 
 header p {
   font-size:18px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
 }
 
 /* ---------- CONTAINER ---------- */
@@ -176,6 +77,11 @@ header p {
 
 h2 {
   color:#0a1f44;
+}
+
+h3 {
+  color:#1e3c72;
+  margin-top: 15px;
 }
 
 /* ---------- SERVICES ---------- */
@@ -216,3 +122,20 @@ h2 {
 }
 
 button {
+  background:#0a1f44;
+  color:white;
+  padding:12px 20px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+button:hover {
+  background:#163a7a;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
