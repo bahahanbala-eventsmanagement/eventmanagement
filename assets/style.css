@@ -117,18 +117,18 @@ a:hover {
   transform: scale(1.05);
 }
 .logo-container {
-  width: 100%;
-  height: 150px; /* ارتفاع الهيدر المخصص للشعار */
+  width: 100%;             /* تمتد بعرض الهيدر بالكامل */
+  height: 200px;           /* ارتفاع الهيدر المخصص للشعار */
   display: flex;
   justify-content: center; /* توسيط أفقي */
   align-items: center;     /* توسيط عمودي */
+  overflow: hidden;        /* يمنع الشعار من الخروج عن الصندوق */
   margin-bottom: 15px;
 }
 
 .logo-container img {
-  max-height: 100%;
-  max-width: 100%;
-  height: auto;
-  width: auto;
-  border-radius: 10px; /* يعطي حواف دائرية للشعار، اختياري */
+  width: auto;             /* يحافظ على نسبة العرض/الارتفاع */
+  height: 100%;            /* يجعل الشعار يمتلئ ارتفاع الحاوية */
+  max-width: 100%;         /* يمنع الشعار من التمدد خارج الهيدر */
+  object-fit: contain;     /* يحافظ على شكل الشعار دون تشويه */
 }
