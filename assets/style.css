@@ -226,3 +226,37 @@ footer a:hover {
 .contact a:hover {
   color: #163a7a;
 }
+.contact {
+  text-align: center;
+  color: #0a1f44 !important; /* النصوص مرئية دائمًا */
+  margin-top: 20px;
+}
+
+.contact p,
+.contact a,
+.contact span {
+  font-size: 18px;
+  margin: 8px 0;
+  color: #0a1f44 !important; /* النصوص مثل البريد والهاتف واللينكدإن */
+  font-weight: 500;
+}
+
+.contact a {
+  text-decoration: none;
+}
+
+.contact a:hover {
+  color: #163a7a !important; /* لون عند المرور */
+}
+
+.contact button {
+  margin-top: 15px;
+  background: #0a1f44;
+  color: white;
+  font-weight: 600;
+}
+
+.contact button:hover {
+  background: #163a7a;
+  transform: translateY(-2px);
+}
