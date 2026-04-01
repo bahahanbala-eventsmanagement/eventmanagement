@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إدارة المعارض والمؤتمرات</title>
+
+<!-- خطوط وأيقونات -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+body {
+  margin:0;
+  font-family: 'Arial', sans-serif;
+  background:#f4f6f9;
+}
+
+header {
+  background: linear-gradient(135deg,#0a1f44,#1e3c72);
+  color:white;
+  padding:60px 20px;
+  text-align:center;
+}
+
+header h1 {
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+header p {
+  font-size:18px;
+}
+
+.container {
+  padding:30px;
+  max-width:1000px;
+  margin:auto;
+}
+
+.card {
+  background:white;
+  padding:25px;
+  margin:20px 0;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+h2 {
+  color:#0a1f44;
+}
+
+.services {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap:15px;
+}
+
+.service {
+  background:#eef2f7;
+  padding:15px;
+  border-radius:10px;
+  text-align:center;
+  transition: transform 0.3s;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+}
+
+.contact {
+  text-align:center;
+}
+
+.contact a {
+  color:#0a1f44;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.contact a:hover {
+  text-decoration:underline;
+}
+
+button {
+  background:#25D366; /* لون واتساب الأخضر */
+  color:white;
+  padding:12px 25px;
+  border:none;
+  border-radius:50px;
+  cursor:pointer;
+  margin-top:15px;
+  font-size:16px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  justify-content:center;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background:#128c50;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>إدارة وتنفيذ المعارض والمؤتمرات</h1>
+<p>الرياض - المملكة العربية السعودية</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>من أنا</h2>
+<p>
+مدير مشاريع ومدير تكاليف متخصص في تنفيذ المعارض والمؤتمرات،
+أقدم حلول احترافية لإدارة المشاريع من التخطيط حتى التنفيذ،
+مع التركيز على الجودة وضبط التكاليف وتحقيق أفضل النتائج.
+</p>
+</div>
+
+<div class="card">
+<h2>الخدمات</h2>
+<div class="services">
+<div class="service">إدارة مشاريع المعارض</div>
+<div class="service">تنفيذ المؤتمرات</div>
+<div class="service">إدارة التكاليف</div>
+<div class="service">الإشراف على التنفيذ</div>
+</div>
+</div>
+
+<div class="card">
+<h2>أعمالي</h2>
+<p>
+تنفيذ وإدارة عدد من المعارض والمؤتمرات في الرياض،
+بمستوى احترافي وضمن الميزانية والجدول الزمني.
+</p>
+</div>
+
+<div class="card contact">
+<h2>تواصل معي</h2>
+<p>📧 <a href="mailto:Bahahanbala@gmail.com">Bahahanbala@gmail.com</a></p>
+<p>📱 <a href="tel:+966573049650">966573049650</a> (اتصال)</p>
+<p>💬 <a href="https://wa.me/966573049650" target="_blank">تواصل عبر واتساب</a></p>
+
+<button onclick="window.open('https://wa.me/966573049650', '_blank')">
+  <i class="fab fa-whatsapp"></i> تواصل الآن
+</button>
+</div>
+
+</div>
+
+</body>
+</html>
