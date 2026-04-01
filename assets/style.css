@@ -116,3 +116,19 @@ a:hover {
 .gallery img:hover {
   transform: scale(1.05);
 }
+.logo-container {
+  width: 100%;
+  height: 150px; /* ارتفاع الهيدر المخصص للشعار */
+  display: flex;
+  justify-content: center; /* توسيط أفقي */
+  align-items: center;     /* توسيط عمودي */
+  margin-bottom: 15px;
+}
+
+.logo-container img {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  border-radius: 10px; /* يعطي حواف دائرية للشعار، اختياري */
+}
