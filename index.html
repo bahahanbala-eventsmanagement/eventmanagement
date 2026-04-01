@@ -55,7 +55,6 @@
   <section class="card" id="projects">
     <h2>أعمالي</h2>
 
-    <!-- مشروع: متحف القرآن الكريم -->
     <h3>متحف القرآن الكريم</h3>
     <div class="gallery">
       <img src="assets/images/museumquran1.jpeg" alt="Quran Museum 1">
@@ -64,7 +63,6 @@
       <img src="assets/images/museumquran4.jpeg" alt="Quran Museum 4">
     </div>
 
-    <!-- مشروع: Cityscape 2026 -->
     <h3>Cityscape 2026</h3>
     <div class="gallery">
       <img src="assets/images/CITYSCAPE1.jpeg" alt="Cityscape 1">
@@ -78,7 +76,6 @@
       <img src="assets/images/CITYSCAPE9.jpeg" alt="Cityscape 9">
     </div>
 
-    <!-- معرض الأقمشة الرجالي 2026 -->
     <h3>معرض الأقمشة الرجالي 2026</h3>
     <div class="gallery">
       <img src="assets/images/fabric1.jpeg" alt="Fabric 1">
@@ -86,7 +83,6 @@
       <img src="assets/images/fabric3.jpeg" alt="Fabric 3">
     </div>
 
-    <!-- معرض القهوة والشوكولاتة 2026 -->
     <h3>معرض القهوة والشوكولاتة 2026</h3>
     <div class="gallery">
       <img src="assets/images/coffee1.jpeg" alt="Coffee 1">
@@ -114,6 +110,7 @@
 </div>
 
 <!-- ---------- JS ---------- -->
+<script>
 // ---------- LANGUAGE SWITCH ----------
 const elements = {
   'about': {
@@ -125,46 +122,21 @@ const elements = {
     'en': ['Event Management', 'Cost Management', 'Exhibitions & Conferences', 'Supplier Coordination']
   },
   'projects': {
-    'ar': {
-      museum: 'متحف القرآن الكريم',
-      cityscape: 'Cityscape 2026',
-      fabric: 'معرض الأقمشة الرجالي 2026',
-      coffee: 'معرض القهوة والشوكولاتة 2026'
-    },
-    'en': {
-      museum: 'Quran Museum',
-      cityscape: 'Cityscape 2026',
-      fabric: 'Men\'s Fabric Expo 2026',
-      coffee: 'Coffee & Chocolate Expo 2026'
-    }
+    'ar': { museum: 'متحف القرآن الكريم', cityscape: 'Cityscape 2026', fabric: 'معرض الأقمشة الرجالي 2026', coffee: 'معرض القهوة والشوكولاتة 2026' },
+    'en': { museum: 'Quran Museum', cityscape: 'Cityscape 2026', fabric: 'Men\'s Fabric Expo 2026', coffee: 'Coffee & Chocolate Expo 2026' }
   },
   'contact': {
-    'ar': {
-      email: 'البريد الإلكتروني: Bahahanbala@gmail.com',
-      phone: 'الهاتف: 966573049650',
-      whatsapp: 'تواصل عبر واتساب',
-      linkedin: 'لينكدإن',
-      button: 'تواصل الآن'
-    },
-    'en': {
-      email: 'Email: Bahahanbala@gmail.com',
-      phone: 'Phone: 966573049650',
-      whatsapp: 'Contact via WhatsApp',
-      linkedin: 'LinkedIn',
-      button: 'Contact Now'
-    }
+    'ar': { email: 'البريد الإلكتروني: Bahahanbala@gmail.com', phone: 'الهاتف: 966573049650', whatsapp: 'تواصل عبر واتساب', linkedin: 'لينكدإن', button: 'تواصل الآن' },
+    'en': { email: 'Email: Bahahanbala@gmail.com', phone: 'Phone: 966573049650', whatsapp: 'Contact via WhatsApp', linkedin: 'LinkedIn', button: 'Contact Now' }
   }
 };
 
-// ---------- FUNCTION SWITCH LANGUAGE ----------
 function switchLang(lang) {
   // About Section
   document.querySelector('#about p').innerText = elements.about[lang];
 
   // Services Section
-  document.querySelectorAll('#services .service').forEach((el, i) => {
-    el.innerText = elements.services[lang][i];
-  });
+  document.querySelectorAll('#services .service').forEach((el, i) => { el.innerText = elements.services[lang][i]; });
 
   // Projects Section
   document.querySelectorAll('#projects h3').forEach((el, i) => {
@@ -185,6 +157,7 @@ function switchLang(lang) {
 
   document.querySelector('.contact button').innerText = elements.contact[lang].button;
 }
+
 // Lightbox
 document.querySelectorAll('.gallery img').forEach(img => {
   img.addEventListener('click', () => {
