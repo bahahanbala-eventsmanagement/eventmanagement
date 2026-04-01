@@ -4,13 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>إدارة المعارض والمؤتمرات</title>
-<link rel="stylesheet" href="assets/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
 
+<!-- CSS -->
+<link rel="stylesheet" href="assets/style.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Lightbox CSS & JS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+
+</head>
 <body>
 
-<!-- ---------- HEADER ---------- -->
 <header>
   <div class="logo-container">
     <img src="assets/images/logo.png" alt="شعار إدارة المعارض والمؤتمرات">
@@ -28,7 +35,7 @@
 
 <div class="container">
 
-  <!-- ---------- ABOUT ---------- -->
+  <!-- About -->
   <section class="card" id="about">
     <h2>من أنا</h2>
     <p>
@@ -38,7 +45,7 @@
     </p>
   </section>
 
-  <!-- ---------- SERVICES ---------- -->
+  <!-- Services -->
   <section class="card" id="services">
     <h2>الخدمات</h2>
     <div class="services">
@@ -49,51 +56,60 @@
     </div>
   </section>
 
-  <!-- ---------- PROJECTS / GALLERY ---------- -->
+  <!-- Projects / Gallery -->
   <section class="card" id="projects">
     <h2>أعمالي</h2>
 
-    <!-- مشروع: متحف القرآن الكريم -->
+    <!-- Quran Museum -->
     <h3>متحف القرآن الكريم</h3>
     <div class="gallery">
-<img src="assets/images/museumquran1.jpeg" alt="Quran Museum 1">
-    <img src="assets/images/museumquran2.jpeg" alt="Quran Museum 2">
-    <img src="assets/images/museumquran3.jpeg" alt="Quran Museum 3">
-    <img src="assets/images/museumquran4.jpeg" alt="Quran Museum 4">
+      <a href="assets/images/museumquran1.jpeg" data-lightbox="quran"><img src="assets/images/museumquran1.jpeg" alt="Quran Museum 1"></a>
+      <a href="assets/images/museumquran2.jpeg" data-lightbox="quran"><img src="assets/images/museumquran2.jpeg" alt="Quran Museum 2"></a>
+      <a href="assets/images/museumquran3.jpeg" data-lightbox="quran"><img src="assets/images/museumquran3.jpeg" alt="Quran Museum 3"></a>
+      <a href="assets/images/museumquran4.jpeg" data-lightbox="quran"><img src="assets/images/museumquran4.jpeg" alt="Quran Museum 4"></a>
     </div>
-<!-- مشروع: Cityscape 2025 -->
-<h3>Cityscape 2025</h3>
-<div class="gallery">
-  <img src="assets/images/CITYSCAPE1.jpeg">
-  <img src="assets/images/CITYSCAPE2.jpeg">
-  <img src="assets/images/CITYSCAPE3.jpeg">
-  <img src="assets/images/CITYSCAPE4.jpeg">
-  <img src="assets/images/CITYSCAPE5.jpeg">
-  <img src="assets/images/CITYSCAPE6.jpeg">
-  <img src="assets/images/CITYSCAPE7.jpeg">
-  <img src="assets/images/CITYSCAPE8.jpeg">
-  <img src="assets/images/CITYSCAPE9.jpeg">
-</div>
-    <div class="card contact">
-<h3>معرض الأقمشة الرجالي 2026</h3>
-<div class="gallery">
-  <img src="assets/images/fabric1.jpeg" alt="fabric 1">
-  <img src="assets/images/fabric2.jpeg" alt="fabric 2">
-  <img src="assets/images/fabric3.jpeg" alt="fabric 3">
-</div>
-<h3>معرض القهوة والشوكولاتة 2026</h3>
-<div class="gallery">
-  <img src="assets/images/coffee1.jpeg" alt="Coffee 1">
-  <img src="assets/images/coffee2.jpeg" alt="Coffee 2">
-  <img src="assets/images/coffee3.jpeg" alt="Coffee 3">
-</div>
-      <h2>تواصل معي</h2>
-<p><i class="fas fa-envelope"></i> <a href="mailto:Bahahanbala@gmail.com">Bahahanbala@gmail.com</a></p>
-<p><i class="fas fa-phone"></i> <a href="tel:+966573049650">966573049650</a></p>
-<p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/966573049650" target="_blank">تواصل عبر واتساب</a></p>
-<p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/baha-hanbala" target="_blank">LinkedIn</a></p>
-<button onclick="window.open('https://wa.me/966573049650','_blank')">تواصل الآن</button>
-</div>
+
+    <!-- Cityscape 2025 -->
+    <h3>Cityscape 2025</h3>
+    <div class="gallery">
+      <a href="assets/images/CITYSCAPE1.jpeg" data-lightbox="cityscape"><img src="assets/images/CITYSCAPE1.jpeg"></a>
+      <a href="assets/images/CITYSCAPE2.jpeg" data-lightbox="cityscape"><img src="assets/images/CITYSCAPE2.jpeg"></a>
+      <a href="assets/images/CITYSCAPE3.jpeg" data-lightbox="cityscape"><img src="assets/images/CITYSCAPE3.jpeg"></a>
+      <a href="assets/images/CITYSCAPE4.jpeg" data-lightbox="cityscape"><img src="assets/images/CITYSCAPE4.jpeg"></a>
+      <a href="assets/images/CITYSCAPE5.jpeg" data-lightbox="cityscape"><img src="assets/images/CITYSCAPE5.jpeg"></a>
+      <a href="assets/images/CITYSCAPE6.jpeg" data-lightbox="cityscape"><img src="assets/images/CITYSCAPE6.jpeg"></a>
+      <a href="assets/images/CITYSCAPE7.jpeg" data-lightbox="cityscape"><img src="assets/images/CITYSCAPE7.jpeg"></a>
+      <a href="assets/images/CITYSCAPE8.jpeg" data-lightbox="cityscape"><img src="assets/images/CITYSCAPE8.jpeg"></a>
+      <a href="assets/images/CITYSCAPE9.jpeg" data-lightbox="cityscape"><img src="assets/images/CITYSCAPE9.jpeg"></a>
+    </div>
+
+    <!-- Fabric Exhibition 2026 -->
+    <h3>معرض الأقمشة الرجالي 2026</h3>
+    <div class="gallery">
+      <a href="assets/images/fabric1.jpeg" data-lightbox="fabric"><img src="assets/images/fabric1.jpeg" alt="Fabric 1"></a>
+      <a href="assets/images/fabric2.jpeg" data-lightbox="fabric"><img src="assets/images/fabric2.jpeg" alt="Fabric 2"></a>
+      <a href="assets/images/fabric3.jpeg" data-lightbox="fabric"><img src="assets/images/fabric3.jpeg" alt="Fabric 3"></a>
+    </div>
+
+    <!-- Coffee & Chocolate 2026 -->
+    <h3>معرض القهوة والشوكولاتة 2026</h3>
+    <div class="gallery">
+      <a href="assets/images/coffee1.jpeg" data-lightbox="coffee"><img src="assets/images/coffee1.jpeg" alt="Coffee 1"></a>
+      <a href="assets/images/coffee2.jpeg" data-lightbox="coffee"><img src="assets/images/coffee2.jpeg" alt="Coffee 2"></a>
+      <a href="assets/images/coffee3.jpeg" data-lightbox="coffee"><img src="assets/images/coffee3.jpeg" alt="Coffee 3"></a>
+    </div>
+
+  </section>
+
+  <!-- Contact -->
+  <div class="card contact" id="contact">
+    <h2>تواصل معي</h2>
+    <p><i class="fas fa-envelope"></i> <a href="mailto:Bahahanbala@gmail.com">Bahahanbala@gmail.com</a></p>
+    <p><i class="fas fa-phone"></i> <a href="tel:+966573049650">966573049650</a></p>
+    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/966573049650" target="_blank">تواصل عبر واتساب</a></p>
+    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/baha-hanbala" target="_blank">LinkedIn</a></p>
+    <button onclick="window.open('https://wa.me/966573049650','_blank')">تواصل الآن</button>
+  </div>
 
 </div>
 
