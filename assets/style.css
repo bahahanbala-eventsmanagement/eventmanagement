@@ -1,69 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /* ---------- BODY ---------- */
 body {
   margin:0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   background:#f4f6f9;
+  color:#333;
+  scroll-behavior: smooth;
 }
 
 /* ---------- HEADER ---------- */
 header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  color: white;
-  padding: 20px 20px 40px 20px;
-  background: linear-gradient(135deg,#0a1f44,#1e3c72);
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0a1f44, #1e3c72);
+  color: #fff;
 }
 
 .logo-container {
-  width: 100%;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  margin-bottom: 15px;
+  width: 250px;     /* الشعار الأفقي */
+  height: auto;
+  margin-bottom: 20px;
 }
 
 .logo-container img {
-  width: auto;
-  height: 100%;
-  max-width: 100%;
+  width: 100%;
+  height: auto;
   object-fit: contain;
-  border-radius: 10px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 header h1 {
-  font-size:40px;
-  margin-bottom:10px;
+  font-size: 42px;
+  margin: 10px 0 5px 0;
+  font-weight: 700;
 }
 
 header p {
-  font-size:18px;
+  font-size: 20px;
+  margin: 0;
+  font-weight: 400;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 30px;
   padding: 0;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 .nav-links li a {
   color: white;
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
 .nav-links li a:hover {
-  text-decoration: underline;
+  background: rgba(255,255,255,0.2);
 }
 
 /* ---------- CONTAINER ---------- */
 .container {
-  padding:30px;
-  max-width:1000px;
-  margin:auto;
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 20px;
 }
 
 /* ---------- CARDS ---------- */
@@ -73,29 +85,45 @@ header p {
   margin:20px 0;
   border-radius:15px;
   box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
 h2 {
   color:#0a1f44;
+  margin-bottom: 15px;
 }
 
 h3 {
   color:#1e3c72;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 /* ---------- SERVICES ---------- */
 .services {
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap:15px;
+  gap:20px;
 }
 
 .service {
   background:#eef2f7;
-  padding:15px;
-  border-radius:10px;
+  padding:20px;
+  border-radius:12px;
   text-align:center;
+  font-weight: 500;
+  font-size: 16px;
+  transition: transform 0.3s, background 0.3s;
+  cursor: default;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+  background:#dbe6f5;
 }
 
 /* ---------- GALLERY ---------- */
@@ -103,17 +131,21 @@ h3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
   gap: 15px;
+  margin-top: 15px;
 }
 
 .gallery img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  transition: transform 0.3s;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
 }
 
 .gallery img:hover {
   transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 /* ---------- CONTACT ---------- */
@@ -121,21 +153,55 @@ h3 {
   text-align:center;
 }
 
+.contact p {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.contact a {
+  text-decoration: none;
+}
+
 button {
   background:#0a1f44;
   color:white;
-  padding:12px 20px;
+  padding:14px 28px;
   border:none;
-  border-radius:8px;
+  border-radius:10px;
   cursor:pointer;
-  margin-top:10px;
+  margin-top:15px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
 button:hover {
   background:#163a7a;
+  transform: translateY(-2px);
 }
 
-a {
+/* ---------- FOOTER ---------- */
+footer {
+  background:#0a1f44;
+  color:white;
+  text-align:center;
+  padding:20px 0;
+  font-size: 14px;
+}
+
+footer a {
+  color:#ffce00;
   text-decoration: none;
-  color: white;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:768px){
+  header h1 { font-size: 32px; }
+  header p { font-size: 16px; }
+  .nav-links { flex-direction: column; gap: 15px; }
+  .logo-container { width: 180px; }
 }
