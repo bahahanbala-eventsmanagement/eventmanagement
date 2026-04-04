@@ -185,18 +185,21 @@ document.querySelectorAll('.nav-links a').forEach(link=>{
 });
 
 // ---------- LIGHTBOX ----------
-document.querySelectorAll('.gallery img').forEach(img=>{
-  img.addEventListener('mouseover',()=>{ img.style.transform='scale(1.05)'; });
-  img.addEventListener('mouseout',()=>{ img.style.transform='scale(1)'; });
-  img.addEventListener('click',()=>{
-    const lb=document.getElementById('lightbox');
-    const lbImg=document.getElementById('lightbox-img');
-    lbImg.src=img.src;
-    lb.classList.add('show');
+<script>
+// فتح الصورة
+document.querySelectorAll('.gallery img').forEach(img => {
+  img.addEventListener('click', () => {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    lightboxImg.src = img.src;
+    lightbox.classList.add('show');
   });
 });
-document.getElementById('lightbox').addEventListener('click',()=>{
-  document.getElementById('lightbox').style.display='none';
+
+// إغلاق الصورة
+document.getElementById('lightbox').addEventListener('click', () => {
+  document.getElementById('lightbox').classList.remove('show');
 });
 </script>
 
