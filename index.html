@@ -186,13 +186,13 @@ document.querySelectorAll('.nav-links a').forEach(link=>{
 
 // ---------- LIGHTBOX ----------
 document.querySelectorAll('.gallery img').forEach(img=>{
-  img.addEventListener('mouseover',()=> img.style.transform='scale(1.05)');
-  img.addEventListener('mouseout',()=> img.style.transform='scale(1)');
+  img.addEventListener('mouseover',()=>{ img.style.transform='scale(1.05)'; });
+  img.addEventListener('mouseout',()=>{ img.style.transform='scale(1)'; });
   img.addEventListener('click',()=>{
     const lb=document.getElementById('lightbox');
     const lbImg=document.getElementById('lightbox-img');
     lbImg.src=img.src;
-    lb.style.display='flex';
+    lb.classList.add('show');
   });
 });
 document.getElementById('lightbox').addEventListener('click',()=>{
