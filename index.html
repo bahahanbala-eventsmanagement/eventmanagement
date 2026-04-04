@@ -118,28 +118,6 @@
     <img src="assets/images/cafe7.jpeg" alt="Cafe 7">
     <img src="assets/images/cafe8.jpeg" alt="Cafe 8">
   </div>
-</section>
-
-<!-- Lightbox -->
-<div id="lightbox">
-  <img id="lightbox-img" src="" alt="Enlarged Image">
-</div>
-
-<script>
-// ---------- LIGHTBOX ----------
-document.querySelectorAll('#cafe .gallery img').forEach(img => {
-  img.addEventListener('click', () => {
-    const lb = document.getElementById('lightbox');
-    const lbImg = document.getElementById('lightbox-img');
-    lbImg.src = img.src;
-    lb.classList.add('show');
-  });
-});
-
-document.getElementById('lightbox').addEventListener('click', () => {
-  document.getElementById('lightbox').classList.remove('show');
-});
-</script>
 
 <section class="card" id="camel">
   <h3>مهرجان الإبل</h3>
@@ -150,30 +128,7 @@ document.getElementById('lightbox').addEventListener('click', () => {
     <img src="assets/images/camel5.jpeg" alt="Camel 5">
     <img src="assets/images/camel6.jpeg" alt="Camel 6">
     <img src="assets/images/camel7.jpeg" alt="Camel 7">
-  </div>
-</section>
-
-<!-- Lightbox -->
-<div id="lightbox">
-  <img id="lightbox-img" src="" alt="Enlarged Image">
-</div>
-
-<script>
-// ---------- LIGHTBOX ----------
-document.querySelectorAll('#camel .gallery img').forEach(img => {
-  img.addEventListener('click', () => {
-    const lb = document.getElementById('lightbox');
-    const lbImg = document.getElementById('lightbox-img');
-    lbImg.src = img.src;
-    lb.classList.add('show');
-  });
-});
-
-document.getElementById('lightbox').addEventListener('click', () => {
-  document.getElementById('lightbox').classList.remove('show');
-});
-</script>
-    
+  </div>    
   </section>
 
   <!-- ---------- CONTACT ---------- -->
