@@ -1,183 +1,211 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
 
 /* ---------- BODY ---------- */
 body {
   margin:0;
-  font-family: 'Roboto', Arial, sans-serif;
-  background:#f4f6f9;
+  font-family:'Cairo', sans-serif;
+  background:linear-gradient(to right, #eef2f7, #f8fbff);
   color:#333;
-  scroll-behavior: smooth;
 }
 
 /* ---------- HEADER ---------- */
 header {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #0a0a0a, #333333);
-  color: #fff;
-}
-
-.logo-container { width: 250px; margin-bottom: 20px; }
-.logo-container img { width:100%; height:auto; object-fit:contain; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,0.3); }
-
-header h1 { font-size:42px; margin:10px 0 5px 0; font-weight:700; }
-header p { font-size:20px; margin:0; font-weight:400; }
-
-.nav-links { list-style:none; display:flex; justify-content:center; gap:30px; padding:0; margin-top:25px; }
-.nav-links li a { color:white; font-weight:bold; text-decoration:none; font-size:16px; padding:6px 12px; border-radius:6px; transition:0.3s; }
-.nav-links li a:hover { background: rgba(255,255,255,0.2); }
-
-/* ---------- LANGUAGE SWITCH ---------- */
-.language-switch { margin-top:15px; }
-.language-switch button {
-  background: rgba(255,255,255,0.2);
-  border:none;
+  text-align:center;
+  padding:60px 20px;
+  background:linear-gradient(135deg,#0a1f44,#1e3c72);
   color:white;
-  padding:6px 12px;
-  margin:0 5px;
-  border-radius:6px;
-  cursor:pointer;
-  font-weight:600;
 }
-.language-switch button:hover { background: rgba(255,255,255,0.4); }
 
-/* ---------- CONTAINER ---------- */
-.container { max-width:1200px; margin:auto; padding:30px 20px; }
+.logo-container img {
+  width:220px;
+  border-radius:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+header h1 {
+  font-size:40px;
+  margin-top:15px;
+}
+
+header p {
+  font-size:18px;
+  opacity:0.8;
+}
+
+/* ---------- NAV ---------- */
+.nav-links {
+  list-style:none;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  margin-top:20px;
+  padding:0;
+}
+
+.nav-links a {
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.nav-links a:hover {
+  color:#ffd700;
+}
 
 /* ---------- CARDS ---------- */
-.card { background:white; padding:25px; margin:20px 0; border-radius:15px; box-shadow:0 10px 25px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
-.card:hover { transform: translateY(-5px); box-shadow:0 15px 35px rgba(0,0,0,0.15); }
+.container {
+  max-width:1200px;
+  margin:auto;
+  padding:30px;
+}
 
-h2 { color:#0a1f44; margin-bottom:15px; }
-h3 { color:#1e3c72; margin-top:20px; }
+.card {
+  background:white;
+  border-radius:20px;
+  padding:25px;
+  margin-bottom:25px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.1);
+  transition:0.4s;
+}
+
+.card:hover {
+  transform:translateY(-8px);
+}
 
 /* ---------- SERVICES ---------- */
-.services { display:grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap:20px; }
-.service {
-  background:#eef2f7; padding:20px; border-radius:12px; text-align:center;
-  font-weight:500; font-size:16px; transition: transform 0.3s, background 0.3s; cursor:pointer;
+.services {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
 }
-.service:hover { transform: scale(1.05); background:#dbe6f5; }
+
+.service {
+  background:linear-gradient(135deg,#e3ecff,#f5f8ff);
+  padding:20px;
+  border-radius:15px;
+  text-align:center;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.service:hover {
+  transform:scale(1.07);
+  background:#dbe6ff;
+}
 
 /* ---------- GALLERY ---------- */
-.gallery { display:grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap:15px; margin-top:15px; }
+.gallery {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+}
+
+/* صورة */
 .gallery img {
-  width:100%; height:auto; border-radius:12px; object-fit:cover;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width:100%;
+  border-radius:15px;
   cursor:pointer;
+  transition:0.4s;
+  position:relative;
 }
-.gallery img:hover { transform: scale(1.05); box-shadow:0 10px 25px rgba(0,0,0,0.2); }
+
+/* حركة احترافية */
+.gallery img:hover {
+  transform:scale(1.1) rotate(1deg);
+  box-shadow:0 15px 35px rgba(0,0,0,0.3);
+}
 
 /* ---------- LIGHTBOX ---------- */
 #lightbox {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.95);
   display:none;
-  position:fixed; z-index:9999;
-  top:0; left:0; width:100%; height:100%;
-  background: rgba(0,0,0,0.9);
-  justify-content:center; align-items:center;
-  cursor:pointer; opacity:0;
-  transition: opacity 0.3s ease-in-out;
-}
-#lightbox.show { display:flex; opacity:1; }
-#lightbox img { max-width:90%; max-height:90%; border-radius:12px; transform: scale(0.8); transition: transform 0.3s ease-in-out; }
-#lightbox.show img { transform: scale(1); }
-
-/* ---------- CONTACT ---------- */
-.contact { text-align:center; margin-top:20px; }
-.contact p { font-size:18px; margin:8px 0; color:#0a1f44; }
-.contact a { text-decoration:none; color:#0a1f44; font-weight:600; }
-.contact a:hover { color:#163a7a; }
-.contact button { margin-top:15px; background:#0a1f44; color:white; font-weight:600; padding:10px 20px; border:none; border-radius:8px; transition: transform 0.2s, background 0.2s; cursor:pointer; }
-.contact button:hover { background:#163a7a; transform:translateY(-2px); }
-
-/* ---------- RESPONSIVE ---------- */
-@media (max-width:768px){
-  header h1 { font-size:32px; }
-  header p { font-size:16px; }
-  .nav-links { flex-direction:column; gap:15px; }
-  .logo-container { width:180px; }
-}
-/* ---------- IMAGE HOVER ---------- */
-.gallery img {
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery img:hover {
-  transform: scale(1.07);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
-
-/* ---------- LIGHTBOX ---------- */
-#lightbox {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.9);
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-#lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-}
-/* ---------- تكبير عند المرور ---------- */
-.gallery img {
-  width: 100%;
-  max-width: 250px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  border-radius: 10px;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-}
-
-/* ---------- LIGHTBOX ---------- */
-#lightbox {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.95);
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  animation:fadeIn 0.3s;
 }
 
 #lightbox.show {
-  display: flex;
+  display:flex;
 }
 
 #lightbox img {
-  max-width: 95%;
-  max-height: 95%;
-  border-radius: 12px;
-  animation: zoomIn 0.3s ease;
+  max-width:90%;
+  max-height:90%;
+  border-radius:15px;
+  animation:zoomIn 0.4s;
 }
 
-/* حركة ناعمة */
+/* ---------- ANIMATIONS ---------- */
 @keyframes zoomIn {
   from {
-    transform: scale(0.8);
-    opacity: 0;
+    transform:scale(0.7);
+    opacity:0;
   }
   to {
-    transform: scale(1);
-    opacity: 1;
+    transform:scale(1);
+    opacity:1;
   }
+}
+
+@keyframes fadeIn {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+
+/* ---------- CONTACT ---------- */
+.contact {
+  text-align:center;
+}
+
+.contact button {
+  background:#1e3c72;
+  color:white;
+  border:none;
+  padding:12px 25px;
+  border-radius:10px;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.contact button:hover {
+  background:#0a1f44;
+  transform:scale(1.05);
+}
+
+/* ---------- WHATSAPP FLOAT ---------- */
+.whatsapp-float {
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:#25D366;
+  color:white;
+  font-size:28px;
+  width:60px;
+  height:60px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  z-index:9999;
+  transition:0.3s;
+}
+
+.whatsapp-float:hover {
+  transform:scale(1.1);
+  background:#1ebe5d;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:768px){
+  header h1 {font-size:28px;}
+  .logo-container img {width:160px;}
 }
