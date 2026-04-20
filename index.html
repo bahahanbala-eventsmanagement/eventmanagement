@@ -233,26 +233,66 @@ const elements = {
                 'en':{ email:'Email: Bahahanbala@gmail.com', phone:'Phone: 966573049650', whatsapp:'Contact via WhatsApp', linkedin:'LinkedIn', button:'Contact Now' } }
 };
 
+<script>
 function switchLang(lang){
-  document.querySelector('#about h2').innerText = elements['about-title'][lang];
-  document.querySelector('#about p').innerText = elements['about'][lang];
-  document.querySelector('#services h2').innerText = elements['services-title'][lang];
-  document.querySelectorAll('#services .service').forEach((el,i)=>el.innerText = elements['services'][lang][i]);
-  document.querySelector('#projects h2').innerText = elements['projects-title'][lang];
-  const projectH3 = document.querySelectorAll('#projects h3');
-  projectH3[0].innerText = elements.projects[lang].museum;
-  projectH3[1].innerText = elements.projects[lang].cityscape;
-  projectH3[2].innerText = elements.projects[lang].fabric;
-  projectH3[3].innerText = elements.projects[lang].coffee;
+
+  // تغيير اتجاه الصفحة
+  document.documentElement.lang = lang;
+  document.body.style.direction = (lang === 'ar') ? 'rtl' : 'ltr';
+
+  // ---------- ABOUT ----------
+  document.querySelector('#about h2').innerText =
+    (lang === 'ar') ? 'من أنا' : 'About Me';
+
+  document.querySelector('#about p').innerText =
+    (lang === 'ar')
+    ? 'مدير مشاريع متخصص في تنفيذ المعارض والمؤتمرات، يقدم حلول احترافية من التخطيط حتى التنفيذ مع التركيز على الجودة وضبط التكاليف.'
+    : 'Project manager specialized in exhibitions & conferences, delivering professional solutions from planning to execution with focus on quality and cost control.';
+
+  // ---------- SERVICES ----------
+  document.querySelector('#services h2').innerText =
+    (lang === 'ar') ? 'الخدمات' : 'Services';
+
+  const services = document.querySelectorAll('#services .service');
+
+  if(lang === 'ar'){
+    services[0].innerText = 'إدارة الفعاليات';
+    services[1].innerText = 'إدارة التكاليف';
+    services[2].innerText = 'تنفيذ المعارض والمؤتمرات';
+    services[3].innerText = 'التنسيق بين الموردين';
+  } else {
+    services[0].innerText = 'Event Management';
+    services[1].innerText = 'Cost Management';
+    services[2].innerText = 'Exhibitions & Conferences';
+    services[3].innerText = 'Supplier Coordination';
+  }
+
+  // ---------- PROJECT TITLE ----------
+  document.querySelector('#projects h2').innerText =
+    (lang === 'ar') ? 'أعمالي' : 'Projects';
+
+  // ---------- CONTACT ----------
+  document.querySelector('#contact h2').innerText =
+    (lang === 'ar') ? 'تواصل معي' : 'Contact Me';
+
   const contactP = document.querySelectorAll('#contact p');
-  contactP[0].innerHTML = <i class="fas fa-envelope"></i> <a href="mailto:Bahahanbala@gmail.com">${elements.contact[lang].email}</a>;
-  contactP[1].innerHTML = <i class="fas fa-phone"></i> <a href="tel:+966573049650">${elements.contact[lang].phone}</a>;
-  contactP[2].innerHTML = <i class="fab fa-whatsapp"></i> <a href="https://wa.me/966573049650" target="_blank">${elements.contact[lang].whatsapp}</a>;
-  contactP[3].innerHTML = <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/baha-hanbala" target="_blank">${elements.contact[lang].linkedin}</a>;
-  document.querySelector('#contact button').innerText = elements.contact[lang].button;
+
+  if(lang === 'ar'){
+    contactP[0].innerHTML = '<i class="fas fa-envelope"></i> <a href="mailto:Bahahanbala@gmail.com">البريد الإلكتروني</a>';
+    contactP[1].innerHTML = '<i class="fas fa-phone"></i> <a href="tel:+966573049650">الهاتف</a>';
+    contactP[2].innerHTML = '<i class="fab fa-whatsapp"></i> <a href="https://wa.me/966573049650" target="_blank">تواصل عبر واتساب</a>';
+    contactP[3].innerHTML = '<i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/baha-hanbala" target="_blank">LinkedIn</a>';
+    document.querySelector('#contact button').innerText = 'تواصل الآن';
+  } else {
+    contactP[0].innerHTML = '<i class="fas fa-envelope"></i> <a href="mailto:Bahahanbala@gmail.com">Email</a>';
+    contactP[1].innerHTML = '<i class="fas fa-phone"></i> <a href="tel:+966573049650">Phone</a>';
+    contactP[2].innerHTML = '<i class="fab fa-whatsapp"></i> <a href="https://wa.me/966573049650" target="_blank">WhatsApp</a>';
+    contactP[3].innerHTML = '<i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/baha-hanbala" target="_blank">LinkedIn</a>';
+    document.querySelector('#contact button').innerText = 'Contact Now';
+  }
 }
 
-// Smooth scroll
+// ---------- SMOOTH SCROLL ----------
 document.querySelectorAll('.nav-links a').forEach(link=>{
   link.addEventListener('click', e=>{
     e.preventDefault();
@@ -261,19 +301,17 @@ document.querySelectorAll('.nav-links a').forEach(link=>{
   });
 });
 
-// Lightbox for gallery
+// ---------- LIGHTBOX ----------
 document.querySelectorAll('.gallery img').forEach(img=>{
   img.addEventListener('click',()=>{
     const lb=document.getElementById('lightbox');
     const lbImg=document.getElementById('lightbox-img');
     lbImg.src = img.src;
-    lb.classList.add('show');
+    lb.style.display = 'flex';
   });
 });
+
 document.getElementById('lightbox').addEventListener('click',()=>{
-  document.getElementById('lightbox').classList.remove('show');
+  document.getElementById('lightbox').style.display = 'none';
 });
 </script>
-
-</body>
-</html>
