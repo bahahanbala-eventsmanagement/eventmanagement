@@ -224,25 +224,54 @@ onclick="window.open('https://wa.me/966573049650','_blank')"></button>
 
 <script>
 function switchLang(lang){
+
+  // اتجاه الصفحة
   document.documentElement.lang = lang;
   document.body.style.direction = (lang === 'ar') ? 'rtl' : 'ltr';
 
+  // تغيير النصوص
   document.querySelectorAll('[data-ar]').forEach(el=>{
-    el.innerText = el.getAttribute('data-' + lang);
+    const text = el.getAttribute('data-' + lang);
+
+    // حماية من الفراغ
+    if(text && text !== "null"){
+      el.innerText = text;
+    }
   });
+
+  // حفظ اللغة
+  localStorage.setItem("siteLang", lang);
 }
 
-document.querySelectorAll('.gallery img').forEach(img=>{
-  img.onclick = ()=>{
-    document.getElementById('lightbox').style.display='flex';
-    document.getElementById('lightbox-img').src=img.src;
-  }
+/* ---------- تشغيل تلقائي عند فتح الصفحة ---------- */
+window.addEventListener("DOMContentLoaded", () => {
+
+  const savedLang = localStorage.getItem("siteLang") || "ar";
+
+  // تشغيل فوري بدون تأخير
+  switchLang(savedLang);
 });
 
-document.getElementById('lightbox').onclick=()=>{
-  document.getElementById('lightbox').style.display='none';
-}
-</script>
+/* ---------- LIGHTBOX ---------- */
+document.querySelectorAll('.gallery img').forEach(img=>{
+  img.addEventListener('click', ()=>{
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
 
-</body>
-</html>
+    lightbox.style.display = 'flex';
+    lightboxImg.src = img.src;
+  });
+});
+
+/* إغلاق lightbox عند الضغط */
+document.getElementById('lightbox').addEventListener('click', ()=>{
+  document.getElementById('lightbox').style.display = 'none';
+});
+
+/* إغلاق بالكيبورد (ESC) */
+document.addEventListener('keydown', (e)=>{
+  if(e.key === "Escape"){
+    document.getElementById('lightbox').style.display = 'none';
+  }
+});
+</script>
