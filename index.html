@@ -3,10 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>إدارة المعارض والمؤتمرات</title>
+
 <link rel="stylesheet" href="assets/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="icon" href="assets/images/logo.png" type="image/png">
+<link rel="icon" href="assets/images/logo.png">
+
 </head>
 
 <body>
@@ -15,46 +19,49 @@
   <div class="logo-container">
     <img src="assets/images/logo.png">
   </div>
-  <h1>إدارة وتنفيذ المعارض والمؤتمرات</h1>
-  <p>الرياض - المملكة العربية السعودية</p>
+
+  <h1 data-ar="إدارة وتنفيذ المعارض والمؤتمرات" data-en="Exhibitions & Conferences Management"></h1>
+  <p data-ar="الرياض - المملكة العربية السعودية" data-en="Riyadh - Saudi Arabia"></p>
+
   <nav>
     <ul class="nav-links">
-      <li><a href="#services">الخدمات</a></li>
-      <li><a href="#projects">أعمالي</a></li>
-      <li><a href="#contact">تواصل معي</a></li>
+      <li><a href="#services" data-ar="الخدمات" data-en="Services"></a></li>
+      <li><a href="#projects" data-ar="أعمالي" data-en="Projects"></a></li>
+      <li><a href="#contact" data-ar="تواصل معي" data-en="Contact"></a></li>
     </ul>
   </nav>
+
   <div class="language-switch">
-    <button onclick="switchLang('ar')">العربية</button>
-    <button onclick="switchLang('en')">English</button>
+    <button onclick="switchLang('ar')">AR</button>
+    <button onclick="switchLang('en')">EN</button>
   </div>
 </header>
 
 <div class="container">
 
+<!-- ABOUT -->
 <section class="card" id="about">
-<h2>من أنا</h2>
-<p>
-مدير مشاريع متخصص في تنفيذ المعارض والمؤتمرات، يقدم حلول احترافية من التخطيط حتى التنفيذ مع التركيز على الجودة وضبط التكاليف.
-جميع المشاريع المعروضة في هذا الموقع تم تنفيذها خلال فترة عملي مع جهات وشركات مختلفة، ودوري كان ضمن فريق العمل وليس بصفتي مالك المشروع.
-جميع الحقوق الفكرية والتجارية لهذه المشاريع تعود إلى الجهات المالكة لها، ويتم عرضها هنا لأغراض توثيق الخبرة المهنية فقط.
-</p>
+<h2 data-ar="من أنا" data-en="About Me"></h2>
+<p data-ar="مدير مشاريع متخصص في تنفيذ المعارض والمؤتمرات..." 
+   data-en="Project manager specialized in exhibitions and conferences..."></p>
 </section>
 
+<!-- SERVICES -->
 <section class="card" id="services">
-<h2>الخدمات</h2>
+<h2 data-ar="الخدمات" data-en="Services"></h2>
 <div class="services">
-<div class="service">إدارة الفعاليات</div>
-<div class="service">إدارة التكاليف</div>
-<div class="service">تنفيذ المعارض والمؤتمرات</div>
-<div class="service">التنسيق بين الموردين</div>
+<div class="service" data-ar="إدارة الفعاليات" data-en="Event Management"></div>
+<div class="service" data-ar="إدارة التكاليف" data-en="Cost Management"></div>
+<div class="service" data-ar="تنفيذ المعارض والمؤتمرات" data-en="Exhibitions & Conferences"></div>
+<div class="service" data-ar="التنسيق بين الموردين" data-en="Supplier Coordination"></div>
 </div>
 </section>
 
+<!-- PROJECTS -->
 <section class="card" id="projects">
-<h2>أعمالي</h2>
+<h2 data-ar="أعمالي" data-en="Projects"></h2>
 
-<h3>متحف القرآن الكريم</h3>
+<h3 data-ar="متحف القرآن الكريم" data-en="Quran Museum"></h3>
 <div class="gallery">
 <img src="assets/images/museumquran1.jpeg">
 <img src="assets/images/museumquran2.jpeg">
@@ -81,21 +88,21 @@
 <img src="assets/images/CITYSCAPE14.jpeg">
 </div>
 
-<h3>معرض الأقمشة الرجالي 2026</h3>
+<h3 data-ar="معرض الأقمشة الرجالي 2026" data-en="Men Fabric Expo 2026"></h3>
 <div class="gallery">
 <img src="assets/images/fabric1.jpeg">
 <img src="assets/images/fabric2.jpeg">
 <img src="assets/images/fabric3.jpeg">
 </div>
 
-<h3>معرض القهوة والشوكولاتة 2026</h3>
+<h3 data-ar="معرض القهوة والشوكولاتة 2026" data-en="Coffee & Chocolate Expo 2026"></h3>
 <div class="gallery">
 <img src="assets/images/coffee1.jpeg">
 <img src="assets/images/coffee2.jpeg">
 <img src="assets/images/coffee3.jpeg">
 </div>
 
-<h3>Dates Museum 2023</h3>
+<h3 data-ar="متحف التمور 2023" data-en="Dates Museum 2023"></h3>
 <div class="gallery">
 <img src="assets/images/Dates2.jpeg">
 <img src="assets/images/Dates3.jpeg">
@@ -107,8 +114,8 @@
 <img src="assets/images/Dates10.jpeg">
 </div>
 
-<section class="card" id="cafe">
-<h3>مقهى حراء</h3>
+<section class="card">
+<h3 data-ar="مقهى حراء" data-en="Hira Cafe"></h3>
 <div class="gallery">
 <img src="assets/images/cafe1.jpeg">
 <img src="assets/images/cafe2.jpeg">
@@ -120,8 +127,8 @@
 <img src="assets/images/cafe8.jpeg">
 </div>
 
-<section class="card" id="camel">
-<h3>مهرجان الإبل</h3>
+<section class="card">
+<h3 data-ar="مهرجان الإبل" data-en="Camel Festival"></h3>
 <div class="gallery">
 <img src="assets/images/camel2.jpeg">
 <img src="assets/images/camel3.jpeg">
@@ -133,7 +140,7 @@
 </section>
 
 <div class="card">
-<h2>فعالية MEDI SERV</h2>
+<h2 data-ar="فعالية MEDI SERV" data-en="MEDI SERV Event"></h2>
 <div class="gallery">
 <img src="assets/images/mediserv1.jpeg">
 <img src="assets/images/mediserv2.jpeg">
@@ -145,7 +152,7 @@
 </div>
 
 <div class="card">
-<h2>معرض المجوهرات 2025</h2>
+<h2 data-ar="معرض المجوهرات 2025" data-en="Jewelry Expo 2025"></h2>
 <div class="gallery">
 <img src="assets/images/jewelry1.jpeg">
 <img src="assets/images/jewelry2.jpeg">
@@ -154,7 +161,7 @@
 </div>
 
 <div class="card">
-<h2>فعالية لقاء المشاريع الأول 2025</h2>
+<h2 data-ar="فعالية لقاء المشاريع الأول 2025" data-en="Projects Meeting 2025"></h2>
 <div class="gallery">
 <img src="assets/images/projects1.jpeg">
 <img src="assets/images/projects2.jpeg">
@@ -163,7 +170,7 @@
 </div>
 
 <div class="card">
-<h2>فعالية شركة خزين</h2>
+<h2 data-ar="فعالية شركة خزين" data-en="Khazin Event"></h2>
 <div class="gallery">
 <img src="assets/images/khazin1.jpeg">
 <img src="assets/images/khazin2.jpeg">
@@ -175,7 +182,7 @@
 </div>
 
 <div class="card">
-<h2>فعالية شركة الرومانسية</h2>
+<h2 data-ar="فعالية شركة الرومانسية" data-en="Romance Event"></h2>
 <div class="gallery">
 <img src="assets/images/romance1.jpeg">
 <img src="assets/images/romance2.jpeg">
@@ -186,29 +193,51 @@
 </div>
 </div>
 
+</section>
+
+<!-- CONTACT -->
 <div class="card contact" id="contact">
-<h2>تواصل معي</h2>
-<p><i class="fas fa-envelope"></i> <a href="mailto:Bahahanbala@gmail.com">Bahahanbala@gmail.com</a></p>
-<p><i class="fas fa-phone"></i> <a href="tel:+966573049650">966573049650</a></p>
-<p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/966573049650" target="_blank">تواصل عبر واتساب</a></p>
-<p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/baha-hanbala" target="_blank">LinkedIn</a></p>
-<button onclick="window.open('https://wa.me/966573049650','_blank')">تواصل الآن</button>
+<h2 data-ar="تواصل معي" data-en="Contact Me"></h2>
+
+<p><i class="fas fa-envelope"></i> <a href="mailto:Bahahanbala@gmail.com">Email</a></p>
+<p><i class="fas fa-phone"></i> <a href="tel:+966573049650">Phone</a></p>
+<p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/966573049650">WhatsApp</a></p>
+
+<button data-ar="تواصل الآن" data-en="Contact Now"
+onclick="window.open('https://wa.me/966573049650','_blank')"></button>
 </div>
 
 </div>
 
+<!-- LIGHTBOX -->
 <div id="lightbox">
-<img id="lightbox-img" src="">
+<img id="lightbox-img">
 </div>
 
-<a href="https://wa.me/966573049650" class="whatsapp-float" target="_blank">
+<!-- WHATSAPP -->
+<a href="https://wa.me/966573049650" class="whatsapp-float">
 <i class="fab fa-whatsapp"></i>
 </a>
 
 <script>
 function switchLang(lang){
-document.documentElement.lang = lang;
-document.body.style.direction = (lang === 'ar') ? 'rtl' : 'ltr';
+  document.documentElement.lang = lang;
+  document.body.style.direction = (lang === 'ar') ? 'rtl' : 'ltr';
+
+  document.querySelectorAll('[data-ar]').forEach(el=>{
+    el.innerText = el.getAttribute('data-' + lang);
+  });
+}
+
+document.querySelectorAll('.gallery img').forEach(img=>{
+  img.onclick = ()=>{
+    document.getElementById('lightbox').style.display='flex';
+    document.getElementById('lightbox-img').src=img.src;
+  }
+});
+
+document.getElementById('lightbox').onclick=()=>{
+  document.getElementById('lightbox').style.display='none';
 }
 </script>
 
