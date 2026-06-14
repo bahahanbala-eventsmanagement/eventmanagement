@@ -138,12 +138,13 @@ data-ar="التزام بالتسليم"
 data-en="Commitment to Delivery"></span>
 </div>
 
-<div class="stat-box">
-<span class="stat-number">100</span>
-<span class="stat-text"
-data-ar="تغطية الشرق الأوسط"
-data-en="Middle East Coverage"></span>
-</div>
+ <div class="stat-box">
+    <span class="stat-number">1</span>
+    <span class="stat-plus"></span>
+    <span class="stat-text"
+      data-ar="تغطية الشرق الأوسط"
+      data-en="Middle East Coverage"></span>
+  </div>
 
 </div>
 
@@ -410,7 +411,7 @@ window.addEventListener("DOMContentLoaded", ()=>{
 });
 
 // =====================
-// STATS COUNTER ANIMATION
+// STATS COUNTER (ON SCROLL)
 // =====================
 
 function animateStats(){
@@ -420,7 +421,7 @@ function animateStats(){
     const target = +stat.getAttribute('data-target');
     let count = 0;
 
-    const speed = target / 60; // سرعة الحركة
+    const speed = target / 60;
 
     const update = () => {
       count += speed;
@@ -437,9 +438,22 @@ function animateStats(){
   });
 }
 
-// تشغيل العدّاد عند تحميل الصفحة
+// تشغيل عند ظهور القسم فقط
+const statsSection = document.querySelector('#stats');
+
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      animateStats();
+      observer.disconnect(); // تشغيل مرة واحدة فقط
+    }
+  });
+}, {
+  threshold: 0.4
+});
+
 window.addEventListener("DOMContentLoaded", ()=>{
-  animateStats();
+  observer.observe(statsSection);
 });
   
 </script>
