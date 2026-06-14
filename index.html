@@ -115,21 +115,24 @@ data-en="We don't just build booths, we create marketing experiences that delive
 <div class="stats-grid">
 
 <div class="stat-box">
-<span class="stat-number">+50</span>
+<span class="stat-number counter" data-target="50">0</span>
+<span class="stat-suffix">+</span>
 <span class="stat-text"
 data-ar="مشروع ومعرض تم تنفيذه"
 data-en="Projects & Exhibitions Delivered"></span>
 </div>
 
 <div class="stat-box">
-<span class="stat-number">6+</span>
+<span class="stat-number counter" data-target="6">0</span>
+<span class="stat-suffix">+</span>
 <span class="stat-text"
 data-ar="سنوات من الخبرة"
 data-en="Years of Experience"></span>
 </div>
 
 <div class="stat-box">
-<span class="stat-number">100%</span>
+<span class="stat-number counter" data-target="100">0</span>
+<span class="stat-suffix">%</span>
 <span class="stat-text"
 data-ar="التزام بالتسليم"
 data-en="Commitment to Delivery"></span>
@@ -406,6 +409,39 @@ window.addEventListener("DOMContentLoaded", ()=>{
   });
 });
 
+// =====================
+// STATS COUNTER ANIMATION
+// =====================
+
+function animateStats(){
+  const stats = document.querySelectorAll('.stat-number');
+
+  stats.forEach(stat=>{
+    const target = +stat.getAttribute('data-target');
+    let count = 0;
+
+    const speed = target / 60; // سرعة الحركة
+
+    const update = () => {
+      count += speed;
+
+      if(count < target){
+        stat.innerText = Math.floor(count);
+        requestAnimationFrame(update);
+      } else {
+        stat.innerText = target;
+      }
+    };
+
+    update();
+  });
+}
+
+// تشغيل العدّاد عند تحميل الصفحة
+window.addEventListener("DOMContentLoaded", ()=>{
+  animateStats();
+});
+  
 </script>
 
 </body>
