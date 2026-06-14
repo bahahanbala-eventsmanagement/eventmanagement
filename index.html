@@ -414,7 +414,7 @@ window.addEventListener("DOMContentLoaded", ()=>{
 // SAFE STATS COUNTER (FIXED)
 // =====================
 
-function animateStats(){
+function animateStats() {
 
   const stats = document.querySelectorAll('.stat-number');
 
@@ -422,14 +422,11 @@ function animateStats(){
 
     const targetAttr = stat.getAttribute('data-target');
 
-    // إذا ما فيه رقم حقيقي → لا نحركه (مثل "1" للشرق الأوسط)
-    if(!targetAttr){
-      return;
-    }
+    if (!targetAttr) return;
 
     const target = parseInt(targetAttr);
 
-    if(isNaN(target)) return;
+    if (isNaN(target)) return;
 
     let count = 0;
     const speed = Math.max(1, target / 60);
@@ -437,7 +434,7 @@ function animateStats(){
     const update = () => {
       count += speed;
 
-      if(count < target){
+      if (count < target) {
         stat.innerText = Math.floor(count);
         requestAnimationFrame(update);
       } else {
@@ -452,11 +449,11 @@ function animateStats(){
 // تشغيل عند ظهور القسم فقط
 const statsSection = document.querySelector('#stats');
 
-if(statsSection){
+if (statsSection) {
 
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
         animateStats();
         observer.disconnect();
       }
@@ -465,10 +462,8 @@ if(statsSection){
     threshold: 0.35
   });
 
-  window.addEventListener("DOMContentLoaded", ()=>{
-    observer.observe(statsSection);
-  });
-
+  // 🔥 الحل: تشغيل مباشر بدون DOMContentLoaded
+  observer.observe(statsSection);
 }
   
 </script>
