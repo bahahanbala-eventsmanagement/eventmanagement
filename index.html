@@ -108,14 +108,14 @@ data-en="We don't just build booths, we create marketing experiences that delive
 <!-- PROJECTS -->
 
 <!-- STATS -->
-<section class="card stats-section">
+<section class="card stats-section" id="stats">
 
 <h2 data-ar="أرقام تتحدث عن الخبرة" data-en="Numbers That Reflect Experience"></h2>
 
 <div class="stats-grid">
 
 <div class="stat-box">
-<span class="stat-number counter" data-target="50">0</span>
+<span class="stat-number" data-target="50">0</span>
 <span class="stat-suffix">+</span>
 <span class="stat-text"
 data-ar="فعالية ومعرض تم تنفيذه"
@@ -123,7 +123,7 @@ data-en="Events & Exhibitions Delivered"></span>
 </div>
 
 <div class="stat-box">
-<span class="stat-number counter" data-target="6">0</span>
+<span class="stat-number" data-target="6">0</span>
 <span class="stat-suffix">+</span>
 <span class="stat-text"
 data-ar="سنوات من الخبرة"
@@ -131,20 +131,20 @@ data-en="Years of Experience"></span>
 </div>
 
 <div class="stat-box">
-<span class="stat-number counter" data-target="100">0</span>
+<span class="stat-number" data-target="100">0</span>
 <span class="stat-suffix">%</span>
 <span class="stat-text"
 data-ar="التزام بالتسليم"
 data-en="Commitment to Delivery"></span>
 </div>
 
- <div class="stat-box">
-    <span class="stat-number">1</span>
-    <span class="stat-plus"></span>
-    <span class="stat-text"
-      data-ar="تغطية الشرق الأوسط"
-      data-en="Middle East Coverage"></span>
-  </div>
+<div class="stat-box">
+<span class="stat-number">1</span>
+<span class="stat-plus"></span>
+<span class="stat-text"
+data-ar="تغطية الشرق الأوسط"
+data-en="Middle East Coverage"></span>
+</div>
 
 </div>
 
@@ -411,7 +411,7 @@ window.addEventListener("DOMContentLoaded", ()=>{
 });
 
 // =====================
-// SAFE STATS COUNTER (FIXED)
+// IMPROVED STATS COUNTER
 // =====================
 
 function animateStats() {
@@ -420,11 +420,10 @@ function animateStats() {
 
   stats.forEach(stat => {
 
-    const targetAttr = stat.getAttribute('data-target');
+    if (stat.dataset.done === "true") return;
+    stat.dataset.done = "true";
 
-    if (!targetAttr) return;
-
-    const target = parseInt(targetAttr);
+    const target = parseInt(stat.getAttribute('data-target'));
 
     if (isNaN(target)) return;
 
@@ -446,7 +445,8 @@ function animateStats() {
   });
 }
 
-// تشغيل عند ظهور القسم فقط
+
+// OBSERVER FIXED
 const statsSection = document.querySelector('#stats');
 
 if (statsSection) {
@@ -462,10 +462,9 @@ if (statsSection) {
     threshold: 0.35
   });
 
-  // 🔥 الحل: تشغيل مباشر بدون DOMContentLoaded
   observer.observe(statsSection);
 }
-  
+
 </script>
 
 </body>
