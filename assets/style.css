@@ -1,75 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap');
 
-/* ---------- ROOT ---------- */
+/* =========================
+   ROOT - PREMIUM COLOR SYSTEM
+========================= */
 :root{
-  --primary:#1e3c72;
-  --secondary:#0a1f44;
-  --accent:#ffd700;
-  --bg1:#eef2f7;
-  --bg2:#f8fbff;
+  --primary:#0b1f3b;
+  --secondary:#1e3c72;
+  --accent:#ffb800;
+  --accent2:#ff3d71;
+  --bg1:#f4f7ff;
+  --bg2:#eef2f7;
+  --text:#1a1a1a;
+  --white:#ffffff;
 }
 
-/* ---------- BODY ---------- */
+/* =========================
+   BODY - MODERN BASE
+========================= */
 body {
   margin:0;
   font-family:'Cairo', sans-serif;
   background:linear-gradient(135deg,var(--bg1),var(--bg2));
-  color:#333;
+  color:var(--text);
   scroll-behavior:smooth;
+  overflow-x:hidden;
 }
 
-/* ---------- HEADER ---------- */
+/* =========================
+   HEADER - PREMIUM HERO LOOK
+========================= */
 header {
   text-align:center;
-  padding:70px 20px;
-  background:linear-gradient(135deg,var(--secondary),var(--primary));
+  padding:80px 20px;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
   color:white;
   position:relative;
   overflow:hidden;
 }
 
-/* glow effect */
+/* animated glow */
 header::after{
   content:'';
   position:absolute;
-  width:400px;
-  height:400px;
-  background:rgba(255,255,255,0.08);
-  top:-100px;
-  right:-100px;
+  width:500px;
+  height:500px;
+  background:radial-gradient(circle, rgba(255,184,0,0.15), transparent 60%);
+  top:-150px;
+  right:-150px;
   border-radius:50%;
+  animation:floatGlow 6s infinite alternate ease-in-out;
 }
 
-/* LOGO */
+@keyframes floatGlow{
+  from{ transform:translateY(0px) scale(1); }
+  to{ transform:translateY(40px) scale(1.1); }
+}
+
+/* =========================
+   LOGO
+========================= */
 .logo-container img {
-  width:200px;
+  width:210px;
   border-radius:18px;
-  box-shadow:0 15px 40px rgba(0,0,0,0.35);
-  transition:0.4s;
+  box-shadow:0 20px 50px rgba(0,0,0,0.4);
+  transition:0.4s ease;
 }
 
 .logo-container img:hover{
-  transform:scale(1.05);
+  transform:scale(1.08) rotate(-1deg);
 }
 
-/* TITLE */
+/* =========================
+   TITLE
+========================= */
 header h1 {
-  font-size:42px;
-  margin-top:15px;
+  font-size:44px;
+  margin-top:20px;
   font-weight:800;
+  letter-spacing:1px;
 }
 
 header p {
   font-size:18px;
-  opacity:0.85;
+  opacity:0.9;
 }
 
-/* ---------- NAV ---------- */
+/* =========================
+   NAVIGATION - MODERN STYLE
+========================= */
 .nav-links {
   list-style:none;
   display:flex;
   justify-content:center;
-  gap:30px;
+  gap:35px;
   margin-top:25px;
   padding:0;
 }
@@ -77,7 +100,7 @@ header p {
 .nav-links a {
   color:white;
   text-decoration:none;
-  font-weight:600;
+  font-weight:700;
   position:relative;
   transition:0.3s;
 }
@@ -86,7 +109,7 @@ header p {
   content:'';
   position:absolute;
   left:0;
-  bottom:-5px;
+  bottom:-6px;
   width:0;
   height:2px;
   background:var(--accent);
@@ -101,31 +124,39 @@ header p {
   width:100%;
 }
 
-/* ---------- CONTAINER ---------- */
+/* =========================
+   CONTAINER
+========================= */
 .container {
   max-width:1200px;
   margin:auto;
-  padding:40px 20px;
+  padding:50px 20px;
 }
 
-/* ---------- CARDS ---------- */
+/* =========================
+   CARDS - GLASS + PREMIUM FEEL
+========================= */
 .card {
-  background:white;
+  background:rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
   border-radius:22px;
   padding:30px;
   margin-bottom:30px;
-  box-shadow:0 20px 50px rgba(0,0,0,0.08);
-  transition:0.4s;
+  box-shadow:0 25px 60px rgba(0,0,0,0.08);
+  transition:0.4s ease;
   position:relative;
   overflow:hidden;
+  border:1px solid rgba(0,0,0,0.05);
 }
 
 .card:hover {
-  transform:translateY(-10px);
-  box-shadow:0 25px 60px rgba(0,0,0,0.15);
+  transform:translateY(-8px);
+  box-shadow:0 35px 80px rgba(0,0,0,0.12);
 }
 
-/* ---------- SERVICES ---------- */
+/* =========================
+   SERVICES - MORE PREMIUM
+========================= */
 .services {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -133,46 +164,50 @@ header p {
 }
 
 .service {
-  background:linear-gradient(135deg,#e3ecff,#f5f8ff);
+  background:linear-gradient(135deg,#ffffff,#f1f5ff);
   padding:25px;
   border-radius:16px;
   text-align:center;
-  font-weight:700;
+  font-weight:800;
   transition:0.4s;
   cursor:pointer;
+  border:1px solid rgba(0,0,0,0.05);
 }
 
 .service:hover {
-  transform:translateY(-8px) scale(1.05);
-  background:linear-gradient(135deg,#dbe6ff,#ffffff);
-  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  transform:translateY(-10px) scale(1.05);
+  background:linear-gradient(135deg,#fff,#e8efff);
+  box-shadow:0 15px 35px rgba(0,0,0,0.12);
 }
 
-/* ---------- GALLERY ---------- */
+/* =========================
+   GALLERY - PREMIUM LOOK
+========================= */
 .gallery {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
   gap:15px;
 }
 
-/* IMAGE */
 .gallery img {
   width:100%;
-  height:230px;
+  height:240px;
   object-fit:cover;
   border-radius:15px;
   cursor:pointer;
-  transition:0.4s;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:0.4s ease;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  filter: saturate(1.05);
 }
 
-/* HOVER EFFECT */
 .gallery img:hover {
-  transform:scale(1.07);
-  box-shadow:0 20px 40px rgba(0,0,0,0.25);
+  transform:scale(1.08);
+  box-shadow:0 25px 50px rgba(0,0,0,0.25);
 }
 
-/* ---------- LIGHTBOX ---------- */
+/* =========================
+   LIGHTBOX
+========================= */
 #lightbox {
   position:fixed;
   top:0;
@@ -187,41 +222,45 @@ header p {
 }
 
 #lightbox img {
-  max-width:90%;
-  max-height:90%;
-  border-radius:15px;
-  animation:zoomIn 0.3s ease;
+  max-width:92%;
+  max-height:92%;
+  border-radius:16px;
+  animation:zoomIn 0.25s ease;
 }
 
-/* ---------- ANIMATIONS ---------- */
 @keyframes zoomIn {
   from {transform:scale(0.7); opacity:0;}
   to {transform:scale(1); opacity:1;}
 }
 
-/* ---------- CONTACT ---------- */
+/* =========================
+   CONTACT - STRONG CTA STYLE
+========================= */
 .contact {
   text-align:center;
 }
 
 .contact button {
-  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
   color:white;
   border:none;
-  padding:14px 30px;
+  padding:15px 32px;
   border-radius:12px;
   font-size:16px;
   cursor:pointer;
   transition:0.3s;
-  font-weight:600;
+  font-weight:800;
+  box-shadow:0 10px 25px rgba(255,61,113,0.25);
 }
 
 .contact button:hover {
-  transform:scale(1.07);
-  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+  transform:scale(1.08);
+  box-shadow:0 15px 40px rgba(255,61,113,0.35);
 }
 
-/* ---------- WHATSAPP FLOAT ---------- */
+/* =========================
+   WHATSAPP FLOAT - MORE ATTRACTIVE
+========================= */
 .whatsapp-float {
   position:fixed;
   bottom:25px;
@@ -229,25 +268,34 @@ header p {
   background:#25D366;
   color:white;
   font-size:28px;
-  width:60px;
-  height:60px;
+  width:62px;
+  height:62px;
   display:flex;
   justify-content:center;
   align-items:center;
   border-radius:50%;
-  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  box-shadow:0 15px 35px rgba(0,0,0,0.25);
   z-index:9999;
-  transition:0.3s;
+  transition:0.3s ease;
+  animation:pulse 2s infinite;
 }
 
 .whatsapp-float:hover {
-  transform:scale(1.15);
+  transform:scale(1.15) rotate(5deg);
   background:#1ebe5d;
 }
 
-/* ---------- RESPONSIVE ---------- */
+@keyframes pulse {
+  0% { box-shadow:0 0 0 0 rgba(37,211,102,0.5); }
+  70% { box-shadow:0 0 0 15px rgba(37,211,102,0); }
+  100% { box-shadow:0 0 0 0 rgba(37,211,102,0); }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
 @media(max-width:768px){
-  header h1 {font-size:28px;}
+  header h1 {font-size:30px;}
   .logo-container img {width:150px;}
   .gallery img{height:180px;}
 }
