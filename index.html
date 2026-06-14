@@ -411,17 +411,28 @@ window.addEventListener("DOMContentLoaded", ()=>{
 });
 
 // =====================
-// STATS COUNTER (ON SCROLL)
+// SAFE STATS COUNTER (FIXED)
 // =====================
 
 function animateStats(){
+
   const stats = document.querySelectorAll('.stat-number');
 
-  stats.forEach(stat=>{
-    const target = +stat.getAttribute('data-target');
-    let count = 0;
+  stats.forEach(stat => {
 
-    const speed = target / 60;
+    const targetAttr = stat.getAttribute('data-target');
+
+    // إذا ما فيه رقم حقيقي → لا نحركه (مثل "1" للشرق الأوسط)
+    if(!targetAttr){
+      return;
+    }
+
+    const target = parseInt(targetAttr);
+
+    if(isNaN(target)) return;
+
+    let count = 0;
+    const speed = Math.max(1, target / 60);
 
     const update = () => {
       count += speed;
@@ -441,20 +452,24 @@ function animateStats(){
 // تشغيل عند ظهور القسم فقط
 const statsSection = document.querySelector('#stats');
 
-const observer = new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      animateStats();
-      observer.disconnect(); // تشغيل مرة واحدة فقط
-    }
-  });
-}, {
-  threshold: 0.4
-});
+if(statsSection){
 
-window.addEventListener("DOMContentLoaded", ()=>{
-  observer.observe(statsSection);
-});
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        animateStats();
+        observer.disconnect();
+      }
+    });
+  }, {
+    threshold: 0.35
+  });
+
+  window.addEventListener("DOMContentLoaded", ()=>{
+    observer.observe(statsSection);
+  });
+
+}
   
 </script>
 
