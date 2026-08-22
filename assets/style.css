@@ -480,7 +480,7 @@ section{ padding:110px 5%; }
 
 .about-body p{
   font-size:16.5px;
-  color:var(--muted-light);
+  color:var(--muted-dark);
   margin-bottom:18px;
 }
 
@@ -500,7 +500,7 @@ section{ padding:110px 5%; }
 }
 .about-fact span{
   font-size:13px;
-  color:var(--muted-light);
+  color:var(--muted-dark);
 }
 
 /* =====================================================
@@ -660,7 +660,7 @@ section{ padding:110px 5%; }
 }
 
 .feature-text p{
-  color:var(--muted-light);
+  color:var(--muted-dark);
   font-size:16.5px;
   margin-bottom:18px;
 }
